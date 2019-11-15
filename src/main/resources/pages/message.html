@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org"
+	xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:layout="http://www.ultraq.net.nz/web/thymeleaf/layout">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<link
+	href="https://cdn.bootcss.com/twitter-bootstrap/3.0.1/css/bootstrap.min.css"
+	rel="stylesheet" />
+<link
+	href="https://cdn.bootcss.com/twitter-bootstrap/3.0.1/css/bootstrap.css"
+	rel="stylesheet" />
+<link
+	href="https://cdn.bootcss.com/twitter-bootstrap/3.0.1/css/bootstrap-theme.css"
+	rel="stylesheet" />
+<link
+	href="https://cdn.bootcss.com/twitter-bootstrap/3.0.1/css/bootstrap-theme.min.css"
+	rel="stylesheet" />
+<title>Insert title here</title>
+</head>
+<body>
+	<div class="container">
+		<div class="row clearfix">
+			<div class="col-md-12 column">
+				<ul class="nav nav-tabs">
+					<li class="active"><a href="index">首页</a></li>
+					<li><a href="seletOne">查询</a></li>
+					<li class="disabled"><a href="addUser">添加</a></li>
+					<li><a href="delete">删除</a></li>
+				</ul>
+				<h3 class="text-center">消息页面</h3>
+				<div class="jumbotron">
+					<p th:text="${message}"></p>
+				</div>
+			</div>
+		</div>
+		<div class="row clearfix">
+			<div class="col-md-4 column">
+				<h2>查询用户</h2>
+				<p>Donec id elit non mi porta gravida at eget metus. Fusce
+					dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh,
+					ut fermentum massa justo sit amet risus. Etiam porta sem malesuada
+					magna mollis euismod. Donec sed odio dui.</p>
+				<button type="button" class="btn btn-lg btn-block active">
+					<a class="btn" href="seletOne">查询 </a>
+				</button>
+			</div>
+			<div class="col-md-4 column">
+				<h2>添加用户</h2>
+				<p>Donec id elit non mi porta gravida at eget metus. Fusce
+					dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh,
+					ut fermentum massa justo sit amet risus. Etiam porta sem malesuada
+					magna mollis euismod. Donec sed odio dui.</p>
+				<button type="button" class="btn btn-lg btn-block active">
+					<a class="btn" href="addUser">添加</a>
+				</button>
+			</div>
+			<div class="col-md-4 column">
+				<h2>删除用户</h2>
+				<p>Donec id elit non mi porta gravida at eget metus. Fusce
+					dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh,
+					ut fermentum massa justo sit amet risus. Etiam porta sem malesuada
+					magna mollis euismod. Donec sed odio dui.</p>
+				<button type="button" class="btn btn-lg btn-block active">
+					<a class="btn" href="delete">删除</a>
+				</button>
+			</div>
+		</div>
+	</div>
+</body>
+</html>

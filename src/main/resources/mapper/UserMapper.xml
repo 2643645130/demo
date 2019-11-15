@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.demo.dao.UserMapperDao">
+	<!--在配置文件中有mybatis.typeAliasesPackage=com.entity 所以resultType
+	中的User不需要写前面的包名7
+	 -->
+	<select id="selectAllUser" resultType="com.entity.User">
+	select * from user
+	</select>
+	
+	<select id="selectOneUser" resultType="com.entity.User">
+	select * from user where id=#{id}
+	</select>
+	
+	<delete id="deleteUser" parameterType="int">
+		delete from user where id=#{id}
+	</delete>
+ 
+	<insert id="addUser" parameterType="User">
+		insert into user(name,password,age)
+		values(#{name},#{password},#{age})
+	</insert>
+
+	<select id="selectUsersPage" resultType="User">
+		select * from user order
+		by id asc limit #{pageNum},#{pageSize}
+	</select>
+ 
+	<!-- 查詢數據庫中總的數據條數 -->
+	<select id="getTotalRecord" resultType="int">
+		select count(*) from user
+	</select>
+	
+	
+	
+</mapper>
